@@ -59,4 +59,14 @@ public class Coordinate {
 		return new Coordinate(this.x + arg0.x, this.y + arg0.y);
 	}
 
+	/**
+	 *
+	 * @param arg0 The coordinate to be subtracted
+	 * @return The modified coordinate
+	 */
+	public Coordinate sub(Coordinate arg0) {
+		return new Coordinate(this.x - arg0.x, this.y - arg0.y);
+	}
+
+
 }

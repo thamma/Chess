@@ -16,7 +16,6 @@ public class ChessPiecePawn extends ChessPieceBase {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return getColor() + " Pawn";
 	}
 

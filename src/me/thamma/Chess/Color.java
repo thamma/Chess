@@ -1,7 +1,14 @@
 package me.thamma.Chess;
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 public enum Color {
 
 	White, Black;
-	
+
+
+	@Override
+	public String toString() {
+		return StringUtils.capitalize(this.name());
+	}
 }
