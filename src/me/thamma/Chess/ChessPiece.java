@@ -35,6 +35,19 @@ public interface ChessPiece {
 	 * @return The name of the Piece
 	 */
 	public String getName();
+	
+	/**
+	 * 
+	 * @return The code of the Piece
+	 * 
+	 * Bishop - b
+	 * King - K
+	 * Knight - k
+	 * Pawn - p
+	 * Queen - Q
+	 * Rook - r
+	 */
+	public String getCode();
 
 	/**
 	 * 

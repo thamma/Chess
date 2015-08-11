@@ -2,7 +2,11 @@ package me.thamma.Chess;
 
 public class ChessPieceKnight extends ChessPieceBase {
 
-    @Override
+    public ChessPieceKnight(Color color, Coordinate coordinate) {
+		super(color, coordinate);
+	}
+
+	@Override
     public boolean canMove(Coordinate arg0) {
         Coordinate move = arg0.sub(this.getCoordinate());
         return (move.x * move.x + move.y * move.y) == 5;
@@ -24,5 +28,10 @@ public class ChessPieceKnight extends ChessPieceBase {
         // TODO Auto-generated method stub
         return false;
     }
+
+	@Override
+	public String getCode() {
+		return "k";
+	}
 
 }
