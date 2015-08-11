@@ -2,8 +2,12 @@ package me.thamma.Chess;
 
 public class Coordinate {
 
-	private int x;
-	private int y;
+	/*
+		Functional Coodinate implementation with vector operations
+	 */
+
+	public int x;
+	public int y;
 
 	/**
 	 * 
@@ -23,7 +27,9 @@ public class Coordinate {
 	 *            The position as string; for instance "a1"
 	 */
 	public Coordinate(String arg0) {
-		//TODO
+		assert(arg0.length() == 2);
+		this.x = arg0.charAt(0) - 'a';
+		this.y = arg0.charAt(1) - '0';
 	}
 
 	/**
@@ -32,8 +38,8 @@ public class Coordinate {
 	 */
 	@Override
 	public String toString() {
-		//TODO
-		return null;
+		final char[] alpha = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+		return "" + alpha[this.x +1] + (this.y + 1);
 	}
 
 	/**
@@ -41,8 +47,16 @@ public class Coordinate {
 	 * @return Whether the coordinate is on the board
 	 */
 	public boolean inBounds() {
-		//TODO
-		return false;
+		return this.x >= 0 && this.x <8 && this.y >= 0 && this.y <= 8;
+	}
+
+	/**
+	 *
+	 * @param arg0 The coordinate to be added
+	 * @return The modified coordinate
+	 */
+	public Coordinate add(Coordinate arg0) {
+		return new Coordinate(this.x + arg0.x, this.y + arg0.y);
 	}
 
 }
