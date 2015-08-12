@@ -79,7 +79,6 @@ public class Board implements Iterable<ChessPiece> {
 		this.grid[6][0] = new ChessPieceKnight(Color.WHITE, new Coordinate(6, 0));
 		this.grid[7][0] = new ChessPieceRook(Color.WHITE, new Coordinate(7, 0));
 
-		//<!--
 		this.grid[0][7] = new ChessPieceRook(Color.BLACK, new Coordinate(0, 7));
 		this.grid[1][7] = new ChessPieceKnight(Color.BLACK, new Coordinate(1, 7));
 		this.grid[2][7] = new ChessPieceBishop(Color.BLACK, new Coordinate(2, 7));
@@ -88,8 +87,7 @@ public class Board implements Iterable<ChessPiece> {
 		this.grid[5][7] = new ChessPieceBishop(Color.BLACK, new Coordinate(5, 7));
 		this.grid[6][7] = new ChessPieceKnight(Color.BLACK, new Coordinate(6, 7));
 		this.grid[7][7] = new ChessPieceRook(Color.BLACK, new Coordinate(7, 7));
-		//--> Im argument new Coordinate(x, y) war y == 0, hab y == 7 gesetzt, so muss es ja sein. 
-		//Comment lesen und löschen wenn einverstanden.
+
 	}
 
 	/**
