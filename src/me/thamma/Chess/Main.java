@@ -8,10 +8,10 @@ public class Main {
 		/*
 		 * Feel free to test and drop some comments here
 		 */
-		
-		BoardGUI gui = new BoardGUI();
-		Board b = new Board(true);
-		System.out.println(b);
+		Board b = new Board(false);
+		BoardGUI gui = new BoardGUI(b);
+		gui.getBoard().addPiece(new ChessPieceKing(Color.WHITE, new Coordinate(4, 4)));
+		gui.redraw();
 
 	}
 

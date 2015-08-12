@@ -6,9 +6,8 @@ public enum Color {
 
 	WHITE, BLACK;
 
-
 	@Override
 	public String toString() {
-		return StringUtils.capitalize(this.name());
+		return this.name().toLowerCase();
 	}
 }

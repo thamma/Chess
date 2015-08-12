@@ -20,7 +20,9 @@ public class Board implements Iterable<ChessPiece> {
 	/**
 	 * 
 	 * Initialized a setup Board
-	 * @param gregory Whether to use Gregory's initialize method, else Dominic's
+	 * 
+	 * @param gregory
+	 *            Whether to use Gregory's initialize method, else Dominic's
 	 */
 	public Board(Boolean gregory) {
 		this();
@@ -48,7 +50,7 @@ public class Board implements Iterable<ChessPiece> {
 				cp = (ChessPiece) pieces[i].getConstructor(Color.class, Coordinate.class).newInstance(Color.WHITE,
 						new Coordinate(posWhite[i]));
 				this.addPiece(cp);
-				cp = (ChessPiece) pieces[i].getConstructor(Coordinate.class, Color.class).newInstance(Color.BLACK,
+				cp = (ChessPiece) pieces[i].getConstructor(Color.class, Coordinate.class).newInstance(Color.BLACK,
 						new Coordinate(posBlack[i]));
 				this.addPiece(cp);
 				cp = new ChessPiecePawn(Color.WHITE, new Coordinate(posWhitePawn[i]));
@@ -174,7 +176,7 @@ public class Board implements Iterable<ChessPiece> {
 
 	/**
 	 *
-	 * @return Iterator containing all ChessPieces on the board
+	 * @return Iterator containing all ChessPieces on the board, never null
 	 */
 	@Override
 	public Iterator<ChessPiece> iterator() {
@@ -187,6 +189,14 @@ public class Board implements Iterable<ChessPiece> {
 			}
 		}
 		return l.iterator();
+	}
+
+	/**
+	 * 
+	 * @return The list off all ChessPieces. They can be null!
+	 */
+	public ChessPiece[][] getGrid() {
+		return grid;
 	}
 
 	/**
