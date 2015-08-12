@@ -4,7 +4,7 @@ import com.sun.xml.internal.ws.util.StringUtils;
 
 public enum Color {
 
-	White, Black;
+	WHITE, BLACK;
 
 
 	@Override
