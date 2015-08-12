@@ -29,6 +29,8 @@ public abstract class ChessPieceBase implements ChessPiece {
 	@Override
 	public boolean isThreatened() {
 		Board b = null;
+		//TODO
+		//Board b should be the board the ChessPiece is on
 		for (ChessPiece p : b) {
 			if (p.canMove(this.getCoordinate()))
 				return true;
