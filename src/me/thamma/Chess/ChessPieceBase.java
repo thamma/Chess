@@ -6,14 +6,14 @@ public abstract class ChessPieceBase implements ChessPiece {
 	private Coordinate coordinate;
 
 	/**
-	 * @param arg0
+	 * @param coordinate
 	 *            The coordinate the piece is at
-	 * @param arg1
+	 * @param color
 	 *            The color the piece belongs to
 	 */
-	public ChessPieceBase(Coordinate arg0, Color arg1) {
-		this.coordinate = arg0;
-		this.color = arg1;
+	public ChessPieceBase(Color color, Coordinate coordinate) {
+		this.color = color;
+		this.coordinate = coordinate;
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public abstract class ChessPieceBase implements ChessPiece {
 
 	@Override
 	public String getName() {
-		return this.getClass().getName().replaceFirst("me.thamma.Chess.ChessPiece", "");
+		return this.getColor() + " " + this.getClass().getName().replaceFirst("me.thamma.Chess.ChessPiece", "");
 	}
 
 }

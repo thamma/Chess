@@ -3,23 +3,30 @@ package me.thamma.Chess;
 public class ChessPieceKing extends ChessPieceBase {
 
 	/**
-	 * @param arg0 The coordinate the piece is at
-	 * @param arg1 The color the piece belongs to
+	 * @param coordinate
+	 *            The coordinate the piece is at
+	 * @param color
+	 *            The color the piece belongs to
 	 */
-	public ChessPieceKing(Coordinate arg0, Color arg1) {
-		super(arg0, arg1);
+	public ChessPieceKing(Color color, Coordinate coordinate) {
+		super(color, coordinate);
 	}
 
 	@Override
-	public boolean canMove(Coordinate arg0) {
+	public boolean canMove(Coordinate target) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public void performMove(Coordinate arg0) {
+	public void performMove(Coordinate target) {
 		// TODO Auto-generated method stub
 
 	}
-	
+
+	@Override
+	public String getCode() {
+		return "K";
+	}
+
 }

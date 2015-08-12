@@ -11,25 +11,25 @@ public class Coordinate {
 
 	/**
 	 * 
-	 * @param arg0
+	 * @param x
 	 *            The column
-	 * @param arg1
+	 * @param y
 	 *            The row
 	 */
-	public Coordinate(int arg0, int arg1) {
-		this.x = arg0;
-		this.y = arg1;
+	public Coordinate(int x, int y) {
+		this.x = x;
+		this.y = y;
 	}
 
 	/**
 	 * 
-	 * @param arg0
+	 * @param input
 	 *            The position as string; for instance "a1"
 	 */
-	public Coordinate(String arg0) {
-		assert(arg0.length() == 2);
-		this.x = arg0.charAt(0) - 'a';
-		this.y = arg0.charAt(1) - '1';
+	public Coordinate(String input) {
+		assert(input.length() == 2);
+		this.x = input.charAt(0) - 'a';
+		this.y = input.charAt(1) - '1';
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class Coordinate {
 	@Override
 	public String toString() {
 		final char[] alpha = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-		return "" + alpha[this.x] + (this.y+1);
+		return "" + alpha[this.x] + (this.y + 1);
 	}
 
 	/**
@@ -52,22 +52,22 @@ public class Coordinate {
 
 	/**
 	 *
-	 * @param arg0
+	 * @param relative
 	 *            The coordinate to be added
 	 * @return The modified coordinate
 	 */
-	public Coordinate add(Coordinate arg0) {
-		return new Coordinate(this.x + arg0.x, this.y + arg0.y);
+	public Coordinate add(Coordinate relative) {
+		return new Coordinate(this.x + relative.x, this.y + relative.y);
 	}
 
 	/**
 	 *
-	 * @param arg0
+	 * @param relative
 	 *            The coordinate to be subtracted
 	 * @return The modified coordinate
 	 */
-	public Coordinate sub(Coordinate arg0) {
-		return new Coordinate(this.x - arg0.x, this.y - arg0.y);
+	public Coordinate sub(Coordinate relative) {
+		return new Coordinate(this.x - relative.x, this.y - relative.y);
 	}
 
 }

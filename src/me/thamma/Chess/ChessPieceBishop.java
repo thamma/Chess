@@ -3,13 +3,13 @@ package me.thamma.Chess;
 public class ChessPieceBishop extends ChessPieceBase {
 
 	/**
-	 * @param arg0
+	 * @param coordinate
 	 *            The coordinate the piece is at
-	 * @param arg1
+	 * @param color
 	 *            The color the piece belongs to
 	 */
-	public ChessPieceBishop(Coordinate arg0, Color arg1) {
-		super(arg0, arg1);
+	public ChessPieceBishop(Color color, Coordinate coordinate) {
+		super(color, coordinate);
 	}
 
 	@Override
@@ -22,6 +22,11 @@ public class ChessPieceBishop extends ChessPieceBase {
 	public void performMove(Coordinate arg0) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public String getCode() {
+		return "b";
 	}
 
 }

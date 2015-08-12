@@ -4,19 +4,19 @@ public interface ChessPiece {
 
 	/**
 	 * 
-	 * @param arg0
+	 * @param target
 	 *            The coordinate to move to
 	 * @return Whether the move is valid
 	 * @see https://de.wikipedia.org/wiki/Schach#Zugregeln
 	 */
-	public boolean canMove(Coordinate arg0);
+	public boolean canMove(Coordinate target);
 
 	/**
 	 * 
-	 * @param arg0
+	 * @param target
 	 *            The coordinate to move to
 	 */
-	public void performMove(Coordinate arg0);
+	public void performMove(Coordinate target);
 
 	/**
 	 * 
@@ -35,6 +35,19 @@ public interface ChessPiece {
 	 * @return The name of the Piece
 	 */
 	public String getName();
+	
+	/**
+	 * 
+	 * @return The code of the Piece
+	 * 
+	 * Bishop - b
+	 * King - K
+	 * Knight - k
+	 * Pawn - p
+	 * Queen - Q
+	 * Rook - r
+	 */
+	public String getCode();
 
 	/**
 	 * 
