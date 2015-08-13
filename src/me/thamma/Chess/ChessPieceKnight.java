@@ -14,6 +14,9 @@ public class ChessPieceKnight extends ChessPieceBase {
 
 	@Override
 	public boolean canMove(Coordinate target) {
+		if (getCoordinate().equals(target) || !target.inBounds()) {
+			return false;
+		}
 		Coordinate move = target.sub(this.getCoordinate());
 		return (move.x * move.x + move.y * move.y) == 5;
 	}

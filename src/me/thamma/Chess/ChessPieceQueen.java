@@ -14,8 +14,13 @@ public class ChessPieceQueen extends ChessPieceBase {
 
 	@Override
 	public boolean canMove(Coordinate target) {
-		// TODO Auto-generated method stub
-		return false;
+		if (getCoordinate().equals(target) || !target.inBounds()) {
+			return false;
+		}
+		return (Math.abs(target.x - getCoordinate().x) == Math.abs(target.y
+				- getCoordinate().y))
+				|| ((target.x - this.getCoordinate().x) == 0 ^ (target.y - this
+						.getCoordinate().y) == 0);
 	}
 
 	@Override

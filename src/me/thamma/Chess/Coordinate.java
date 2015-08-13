@@ -27,7 +27,7 @@ public class Coordinate {
 	 *            The position as string; for instance "a1"
 	 */
 	public Coordinate(String input) {
-		assert(input.length() == 2);
+		assert (input.length() == 2);
 		this.x = input.charAt(0) - 'a';
 		this.y = input.charAt(1) - '1';
 	}
@@ -68,6 +68,15 @@ public class Coordinate {
 	 */
 	public Coordinate sub(Coordinate relative) {
 		return new Coordinate(this.x - relative.x, this.y - relative.y);
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Coordinate)) {
+			return false;
+		}
+		Coordinate c = (Coordinate) o;
+		return c.x == this.x && c.y == this.y;
 	}
 
 }

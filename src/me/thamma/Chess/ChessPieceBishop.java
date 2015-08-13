@@ -13,15 +13,18 @@ public class ChessPieceBishop extends ChessPieceBase {
 	}
 
 	@Override
-	public boolean canMove(Coordinate arg0) {
-		// TODO Auto-generated method stub0
-		return false;
+	public boolean canMove(Coordinate target) {
+		if (getCoordinate().equals(target) || !target.inBounds()) {
+			return false;
+		}
+		return Math.abs(target.x - getCoordinate().x) == Math.abs(target.y
+				- getCoordinate().y);
+
 	}
 
 	@Override
-	public void performMove(Coordinate arg0) {
+	public void performMove(Coordinate target) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override

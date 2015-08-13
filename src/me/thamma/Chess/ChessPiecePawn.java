@@ -14,8 +14,16 @@ public class ChessPiecePawn extends ChessPieceBase {
 
 	@Override
 	public boolean canMove(Coordinate target) {
-		// TODO Auto-generated method stub
-		return false;
+		if (getCoordinate().equals(target) || !target.inBounds()) {
+			return false;
+		}
+		if (getColor() == Color.WHITE) {
+			return target.x == getCoordinate().x
+					&& target.y == getCoordinate().y + 1;
+		} else {
+			return target.x == getCoordinate().x
+					&& target.y == getCoordinate().y - 1;
+		}
 	}
 
 	@Override
